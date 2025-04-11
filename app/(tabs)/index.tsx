@@ -33,11 +33,11 @@ export default function HomeScreen() {
       </RNText>
 
       {/* UI Kitten Button */}
-      <View style={{ marginVertical: 10 }}>
+      <View style={{ marginVertical: 12 }}>
         <LinearGradient
           colors={['#FFEE59', '#FFFFFF']}
-          start={{ x: 0, y: 0 }}
-          end={{ x: 1, y: 0 }}
+          start={{ x: 1, y: 0 }}
+          end={{ x: 0, y: 0 }}
           style={{
             ...figmaButtonStyle,
             justifyContent: 'center',
@@ -53,7 +53,7 @@ export default function HomeScreen() {
             }}
             appearance="ghost"
           >
-            {evaProps => <RNText style={{ ...buttonTextStyle, color: '#000' }}>UI Kitten Button</RNText>}
+            {evaProps => <RNText style={{ ...buttonTextStyle, color: '#000', paddingVertical: 5 }}>UI Kitten Button</RNText>}
           </UIKittenButton>
         </LinearGradient>
       </View>
@@ -63,8 +63,8 @@ export default function HomeScreen() {
         <View style={{ marginVertical: 10 }}>
           <LinearGradient
             colors={['#FFEE59', '#FFFFFF']}
-            start={{ x: 0, y: 0 }}
-            end={{ x: 1, y: 0 }}
+            start={{ x: 1, y: 0 }}
+            end={{ x: 0, y: 0 }}
             style={{
               ...figmaButtonStyle,
               justifyContent: 'center',
@@ -92,8 +92,8 @@ export default function HomeScreen() {
         ViewComponent={LinearGradient}
         linearGradientProps={{
           colors: ['#FFEE59', '#FFFFFF'],
-          start: { x: 0, y: 0 },
-          end: { x: 1, y: 0 },
+          start: { x: 1, y: 0 },
+          end: { x: 0, y: 0 },
         }}
         buttonStyle={{
           ...figmaButtonStyle,
@@ -110,8 +110,8 @@ export default function HomeScreen() {
         <View style={{ marginVertical: 10 }}>
           <LinearGradient
             colors={['#FFEE59', '#FFFFFF']}
-            start={{ x: 0, y: 0 }}
-            end={{ x: 1, y: 0 }}
+            start={{ x: 1, y: 0 }}
+            end={{ x: 0, y: 0 }}
             style={{
               ...figmaButtonStyle,
               justifyContent: 'center',
