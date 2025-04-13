@@ -1,3 +1,76 @@
+
+
+## Screen Components
+
+### ChapterScreen
+- **Description**: Main screen showing chapter information and available lessons.
+- **Key Components**: 
+  - AppHeader
+  - ChapterCard
+  - ProgressPath
+  - LessonCard (multiple)
+  - BottomNavBar
+
+### LessonScreen
+- **Description**: Screen showing lesson content with interactive elements.
+- **Key Components**: 
+  - AppHeader (with back button)
+  - QuestionPrompt
+  - ChoiceCard (multiple)
+  - FeedbackCard
+  - PrimaryButton
+  - LessonProgressIndicator
+
+### ComparisonScreen
+- **Description**: Screen comparing different investment approaches.
+- **Key Components**: 
+  - NavHeader
+  - CharacterComparisonCard (multiple)
+  - ComparisonResult
+  - TimeperiodSelector
+  - PrimaryButton
+
+### CalculationScreen
+- **Description**: Screen for compounding interest calculations.
+- **Key Components**: 
+  - PageHeader
+  - InputValueCard (multiple)
+  - ResultDisplay
+  - ToggleButtonGroup
+  - PrimaryButton
+
+### StockMarketScreen
+- **Description**: Screen showing stock market behavior over time.
+- **Key Components**: 
+  - AppHeader
+  - TimelineToggle
+  - StockChart
+  - InsightCard
+  - PrimaryButton
+
+### QuizIntroScreen
+- **Description**: Introduction screen before starting a quiz.
+- **Key Components**: 
+  - AppHeader
+  - QuizIntro
+  - CenteredIllustration
+  - PrimaryButton
+
+### QuizQuestionScreen
+- **Description**: Screen displaying individual quiz questions.
+- **Key Components**: 
+  - QuizNavigationHeader
+  - QuizQuestion
+  - QuizOptionItem (multiple)
+  - PrimaryButton
+
+### LessonCompletionScreen
+- **Description**: Screen shown after completing a lesson.
+- **Key Components**: 
+  - ScreenContainer
+  - CenteredIllustration
+  - PrimaryButton (Next lesson)
+
 ## Navigation & Layout Components
 
 ### AppHeader
@@ -207,76 +280,6 @@
   - `onSecondaryPress`: Function - Handler for secondary action
 - **Description**: Modal for warnings or confirmations with multiple actions.
 
-## Screen Components
-
-### ChapterScreen
-- **Description**: Main screen showing chapter information and available lessons.
-- **Key Components**: 
-  - AppHeader
-  - ChapterCard
-  - ProgressPath
-  - LessonCard (multiple)
-  - BottomNavBar
-
-### LessonScreen
-- **Description**: Screen showing lesson content with interactive elements.
-- **Key Components**: 
-  - AppHeader (with back button)
-  - QuestionPrompt
-  - ChoiceCard (multiple)
-  - FeedbackCard
-  - PrimaryButton
-  - LessonProgressIndicator
-
-### ComparisonScreen
-- **Description**: Screen comparing different investment approaches.
-- **Key Components**: 
-  - NavHeader
-  - CharacterComparisonCard (multiple)
-  - ComparisonResult
-  - TimeperiodSelector
-  - PrimaryButton
-
-### CalculationScreen
-- **Description**: Screen for compounding interest calculations.
-- **Key Components**: 
-  - PageHeader
-  - InputValueCard (multiple)
-  - ResultDisplay
-  - ToggleButtonGroup
-  - PrimaryButton
-
-### StockMarketScreen
-- **Description**: Screen showing stock market behavior over time.
-- **Key Components**: 
-  - AppHeader
-  - TimelineToggle
-  - StockChart
-  - InsightCard
-  - PrimaryButton
-
-### QuizIntroScreen
-- **Description**: Introduction screen before starting a quiz.
-- **Key Components**: 
-  - AppHeader
-  - QuizIntro
-  - CenteredIllustration
-  - PrimaryButton
-
-### QuizQuestionScreen
-- **Description**: Screen displaying individual quiz questions.
-- **Key Components**: 
-  - QuizNavigationHeader
-  - QuizQuestion
-  - QuizOptionItem (multiple)
-  - PrimaryButton
-
-### LessonCompletionScreen
-- **Description**: Screen shown after completing a lesson.
-- **Key Components**: 
-  - ScreenContainer
-  - CenteredIllustration
-  - PrimaryButton (Next lesson)
 
 Assumption
 
