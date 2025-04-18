@@ -6,9 +6,18 @@ import { Button as RNEButton } from 'react-native-elements';
 import { GluestackUIProvider } from '@/components/ui/gluestack-ui-provider';
 import { Button as GluestackButton } from '@/components/ui/button';
 import { LinearGradient } from 'expo-linear-gradient';
-
+import { Header } from '@/components/aarmabha-comps/Header';
+import { useNavigation } from '@react-navigation/native'
+import { ChapterCard } from '@/components/ChapterCard';
+import { Image } from "react-native"
+import { LessonCard } from '@/components/LessonCard';
+import { StarIcon } from 'lucide-react-native';
 export default function HomeScreen() {
   // Define constants for reuse
+  const toggleSound = () => {
+    console.log("hello")
+  }
+  const navigation = useNavigation()
   const GRADIENT_COLORS = ['#FFEE59', '#FFFFFF'];
   const GRADIENT_START = { x: 1, y: 0 };
   const GRADIENT_END = { x: 0, y: 0 };
@@ -62,69 +71,45 @@ export default function HomeScreen() {
       style={styles.gradientBackground}
     >
       <ScrollView contentContainerStyle={styles.scrollContainer}>
-        <RNText style={styles.headerText}>All UI Framework Buttons</RNText>
-
-        {/* UI Kitten Button */}
-        <ButtonGradientWrapper>
-          <UIKittenButton
-            style={styles.transparentButton}
-            appearance="ghost"
-          >
-            {evaProps => (
-              <UIKittenText 
-                {...evaProps} 
-                style={[buttonConfig.text, { fontSize: 16 }]}
-              >
-                UI Kitten Button
-              </UIKittenText>
-            )}
-          </UIKittenButton>
-        </ButtonGradientWrapper>
-
-        {/* React Native Paper Button */}
-        <PaperProvider>
-          <ButtonGradientWrapper>
-            <PaperButton
-              mode="text"
-              labelStyle={buttonConfig.text}
-              style={styles.fullSizeButton}
-            >
-              React Native Paper
-            </PaperButton>
-          </ButtonGradientWrapper>
-        </PaperProvider>
-
-        {/* React Native Elements Button */}
-        <RNEButton
-          title="React Native Elements"
-          ViewComponent={LinearGradient}
-          linearGradientProps={{
-            colors: GRADIENT_COLORS,
-            start: GRADIENT_START,
-            end: GRADIENT_END,
-          }}
-          buttonStyle={{
-            ...buttonConfig.dimensions,
-            backgroundColor: 'transparent',
-            paddingVertical: buttonConfig.padding.vertical,
-            paddingHorizontal: buttonConfig.padding.horizontal,
-          }}
-          titleStyle={buttonConfig.text}
-          containerStyle={styles.buttonWrapper}
+        <Header
+          title="Learn"
+          subtitle="Become a Savvy Investor"
+          alignLeft={true}
         />
 
-        {/* Gluestack Button */}
-        <GluestackUIProvider>
-          <ButtonGradientWrapper>
-            <GluestackButton
-              size="md"
-              variant="solid"
-              style={styles.transparentButton}
-            >
-              <RNText style={buttonConfig.text}>Gluestack Button</RNText>
-            </GluestackButton>
-          </ButtonGradientWrapper>
-        </GluestackUIProvider>
+        <Header
+          title="Saving vs. Investing"
+          showBack
+          onBackPress={() => navigation.goBack()}
+        />
+
+        <Header
+          title="Why Invest"
+          showBack
+          showSoundIcon
+          isSoundOn={false}
+          onBackPress={() => navigation.goBack()}
+          onToggleSound={() => toggleSound()}
+        />
+
+        <ChapterCard
+          chapterNumber={1}
+          title="Investing Basics"
+          icon={
+            <Image
+              source={require("../../assets/images/books.png")} // or use an Emoji/Icon component
+              style={{ width: 48, height: 48 }}
+            />
+          }
+        />
+
+        <LessonCard
+          title="Saving vs. Investing"
+          subtitle="Understand how saving differs from investing"
+          actionType="start"
+          onActionClick={() => console.log("Lesson Started")}
+        />
+
       </ScrollView>
     </LinearGradient>
   );
